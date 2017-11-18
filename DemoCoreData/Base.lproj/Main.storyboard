@@ -16,10 +16,34 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Yy6-bG-Euq">
+                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ctr-F9-iYx"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Yy6-bG-Euq" secondAttribute="trailing" id="lfR-H5-cZf"/>
+                            <constraint firstItem="Yy6-bG-Euq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mcO-rD-wUA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Yy6-bG-Euq" secondAttribute="bottom" id="oFY-jO-reo"/>
+                            <constraint firstItem="Yy6-bG-Euq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="vxX-Vo-b6E"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="hKd-o6-w8H"/>
+                    <navigationItem key="navigationItem" id="hKd-o6-w8H">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ewF-vB-AJg">
+                            <connections>
+                                <action selector="addName:" destination="BYZ-38-t0r" id="ayF-qE-gYT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="Yy6-bG-Euq" id="oSV-Q6-wXd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -30,8 +54,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="76Z-iM-1ET" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Nhy-ob-nOx">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Nhy-ob-nOx">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
